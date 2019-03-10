@@ -1,0 +1,16 @@
+language: groovy
+addons:
+    hosts:
+        - rente-backend
+    apt:
+        packages:
+            - haveged
+jdk:
+    - oraclejdk8
+script:
+    - ./gradlew check
+cache:
+    directories:
+        - "$HOME/.gradle/caches/"
+        - "$HOME/.gradle/wrapper/"
+        - "$HOME/.grails/"
